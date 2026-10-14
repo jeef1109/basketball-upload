@@ -1,0 +1,48 @@
+/* An optional scrapbook skin, grounded in the user-supplied collage. */
+body{position:relative;isolation:isolate;padding-top:28px}
+.theme-switch{display:flex;gap:4px;position:relative;z-index:20;padding:4px;border-radius:24px;background:#f8f9fc;border:1px solid #dce0e7}
+.theme-switch button{min-height:36px;padding:8px 19px;border:0;border-radius:20px;background:transparent;color:#606774;font-size:12px;transition:background-color .2s,color .2s}
+.theme-switch button[aria-pressed=true]{background:#303542;color:#fff}
+.collage-decoration{display:none;pointer-events:none}
+body[data-theme=collage]{background:#c9bea5;color:#302a23;gap:24px}
+body[data-theme=collage]::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(#e5dcc455,#e5dcc455),url('assets/collage-reference.png') center 42%/cover;pointer-events:none}
+body[data-theme=collage]::after{content:"";position:fixed;inset:0;z-index:-1;background:#ddd2b92b;pointer-events:none}
+[data-theme=collage] .theme-switch{background:#f6efdc;border:1px solid #a4977b;border-radius:3px;box-shadow:2px 4px 10px #44331d22;transform:rotate(-1deg)}
+[data-theme=collage] .theme-switch button{border-radius:2px;color:#554933}
+[data-theme=collage] .theme-switch button[aria-pressed=true]{background:#433b2e;color:#fff6df}
+[data-theme=collage] .upload-card{background:linear-gradient(#ece2c9f5,#e2d5baf5),url('assets/collage-reference.png') 8% 38%/1000px auto;border:0;border-radius:2px;box-shadow:6px 12px 25px #3e301b45;outline:1px solid #82734c44;outline-offset:-8px}
+[data-theme=collage] .upload-card::before{content:"";position:absolute;left:calc(50% - 65px);top:-14px;width:130px;height:32px;z-index:7;background:#bf7e43bd;box-shadow:0 2px 3px #5c3a1b16;transform:rotate(-4deg);clip-path:polygon(2% 0,98% 4%,96% 12%,100% 20%,97% 30%,99% 45%,96% 60%,99% 75%,97% 100%,2% 97%,4% 84%,0 70%,3% 55%,0 40%,3% 20%);pointer-events:none}
+[data-theme=collage] header{padding-top:33px}
+[data-theme=collage] h1{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:30px;letter-spacing:-1px;line-height:1;margin-bottom:9px}
+[data-theme=collage] header p{color:#6b5f49;font-family:Georgia,serif;font-style:italic}
+[data-theme=collage] .sound{background:#efe5cd;border-color:#bbad8c;color:#6c5b3b}
+[data-theme=collage] .sound[aria-pressed=true]{background:var(--shot-soft);color:var(--shot-color)}
+[data-theme=collage] .count{background:#f4ecd9;border:1px solid #aa9877;color:#655437;border-radius:3px;transform:rotate(3deg);font-family:Georgia,serif}
+[data-theme=collage] .count b{color:#443923}
+[data-theme=collage] .drop-zone{top:111px;background:#fbf6e9;border:0;border-radius:1px;box-shadow:1px 4px 6px #66553420;outline:1px dashed #b9aa8d;outline-offset:-10px;transform:rotate(-1deg)}
+[data-theme=collage] .drop-zone::before{content:"";position:absolute;inset:-5px -3px;background:#fbf6e9;z-index:-1;clip-path:polygon(0 3%,4% 1%,8% 3%,12% 0,18% 2%,24% 1%,30% 3%,37% 0,43% 2%,49% 1%,56% 3%,64% 0,72% 2%,80% 1%,88% 3%,96% 0,100% 2%,99% 22%,100% 40%,99% 58%,100% 78%,99% 98%,94% 100%,85% 98%,78% 100%,70% 98%,61% 100%,54% 97%,45% 100%,37% 98%,28% 100%,20% 98%,12% 100%,5% 98%,0 100%,1% 80%,0 60%,1% 40%)}
+[data-theme=collage] .browse{color:#473d2e;padding-top:23px}
+[data-theme=collage] .browse strong{font-family:Georgia,serif;font-size:18px;font-weight:normal}
+[data-theme=collage] .browse span{color:#86785e;font-family:Georgia,serif;font-style:italic}
+[data-theme=collage] .hoop>svg>rect:first-of-type{fill:#eee4cc;stroke:#beae8e}
+[data-theme=collage] #net{stroke:#8a7b61}
+[data-theme=collage] .paper{background:#fff9e8;border-color:#d7c7a6;border-radius:0;box-shadow:2px 3px 0 #d0c0a06b}
+[data-theme=collage] .fold{border-top-color:#ded0b2;border-left-color:#b9a887}
+[data-theme=collage] .paper-lines{background:repeating-linear-gradient(#b8aa8c 0 1px,transparent 1px 5px)}
+[data-theme=collage] .file-type{border-radius:0;font-family:Georgia,serif}
+[data-theme=collage] .hint{color:#6e6047;font-family:Georgia,serif;font-style:italic;font-size:12px}
+[data-theme=collage] .reset{color:#78694e}
+[data-theme=collage] .caption{background:#faf3e2;color:#544730;padding:10px 22px;transform:rotate(-2deg);box-shadow:1px 3px 7px #47371d24;font-family:Georgia,serif;font-style:italic}
+[data-theme=collage] .caption span{color:#7b6d53;font-family:Arial,sans-serif;font-style:normal}
+[data-theme=collage] .progress-item{background:#f0e8d6;border-color:#dfd2b7;border-radius:2px}
+[data-theme=collage] .progress-note{color:#796d55}
+[data-theme=collage] .library{background:#faf2df;border-color:#cbb995;border-radius:2px}
+[data-theme=collage] .library p,[data-theme=collage] .saved-row small{color:#7c6b4c}
+[data-theme=collage] .saved-row{border-color:#d8c9aa}
+[data-theme=collage] .collage-decoration{display:block;position:absolute;inset:0;overflow:hidden;z-index:-1}
+.postmark{position:absolute;left:calc(50% + 295px);top:22%;padding:14px 18px;border:3px double #854f37;color:#854f37;transform:rotate(13deg);font:bold 17px/1.6 Georgia,serif;text-align:center;letter-spacing:3px;background:#f3e6c9cc}
+.margin-note{position:absolute;right:calc(50% + 295px);bottom:24%;font:italic 25px/1.35 Georgia,serif;color:#3f3829;transform:rotate(-12deg);background:#ece0c4cc;padding:14px}
+[data-theme=collage] ::selection{background:#b88545;color:#fff9ea}
+[data-theme=collage] button:focus-visible{outline-color:#9c642f}
+@media(max-width:600px){body[data-theme=collage]::before{background-size:auto 1100px;background-position:center top}[data-theme=collage] h1{font-size:25px}[data-theme=collage] .upload-card{width:100%}[data-theme=collage] header{padding-left:22px;padding-right:22px}[data-theme=collage] .count{font-size:10px}.postmark,.margin-note{display:none}[data-theme=collage] .caption{font-size:11px}body{padding-bottom:24px}}
+@media(prefers-reduced-motion:reduce){.theme-switch button{transition:none}}

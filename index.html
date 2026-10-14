@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e9edf0"><title>文件像投篮球 · Basketball Upload</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="themes.css"></head>
+<body data-theme="collage">
+<nav class="theme-switch" aria-label="页面风格"><button type="button" data-theme-choice="minimal" aria-pressed="false">简约</button><button type="button" data-theme-choice="collage" aria-pressed="true">复古拼贴</button></nav>
+<div class="collage-decoration" aria-hidden="true"><span class="postmark">AIR MAIL<br>TAKE YOUR SHOT</span><span class="margin-note">a small collection<br>of good shots.</span></div>
+<main class="upload-card" aria-label="篮球文件上传">
+  <header><div><h1>Upload files</h1><p>Drag and drop, or take the shot.</p></div><div class="actions"><button id="sound" class="sound" aria-label="开启音乐和投篮音效" title="开启音乐和投篮音效" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 4c2 2 2 4 0 6m3-9c4 4 4 8 0 12"/></svg></button><button id="uploads" class="count">Uploaded <b id="count">0</b></button></div></header>
+  <section id="drop-zone" class="drop-zone" aria-label="文件投放区"><button id="browse" class="browse"><svg viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/></svg><strong>Drop files here</strong><span>or take the shot</span></button><div id="progress-list" class="progress-list" aria-live="polite"></div></section>
+  <div class="hoop" aria-hidden="true"><svg viewBox="0 0 140 180"><defs><filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#383449" flood-opacity=".08"/></filter></defs><rect x="17" y="7" width="106" height="66" rx="5" fill="#fcfcfe" stroke="#e2e1e9" stroke-width="2" filter="url(#shadow)"/><path d="M44 71V29h52v42" fill="none" stroke="var(--shot-color)" stroke-width="2.5"/><g id="net" stroke="#a1a6b3" stroke-width="1.25" fill="none"><path d="M34 78 54 148h32l20-70M40 81l19 67m-11-65 16 65M57 85l12 63m-3-62 7 62m2-62 3 62m6-64-2 64m12-67-9 67m15-67-14 67M34 78l24 24 37 24M42 99l31 22 17 18M48 120l33 26M106 78l-24 24-37 24M98 99l-31 22-17 18M92 120l-33 26M40 99q30 11 60 0M47 122q23 9 46 0M52 138q18 7 36 0"/></g><ellipse cx="70" cy="77" rx="36" ry="10" fill="#f7f7fc" stroke="var(--shot-color)" stroke-width="3"/><path d="M34 77q36 17 72 0" fill="none" stroke="var(--shot-color)" stroke-width="4"/><rect x="63" y="68" width="14" height="7" rx="2" fill="var(--shot-color)"/></svg></div>
+  <svg id="trajectory" class="trajectory" aria-hidden="true"><path id="arc"/><circle id="aim" r="4"/></svg>
+  <button id="file" class="file-token" aria-label="拖动文件，松手投篮；点击或按空格演示"><span class="paper"><i class="fold"></i><span class="paper-lines"></span><span class="file-type">PDF</span></span></button>
+  <div id="particles" aria-hidden="true"></div>
+  <button id="reset" class="reset" aria-label="重置文件位置" title="重置文件位置">↻</button><p id="hint" class="hint" aria-live="polite">Grab the file. Make your shot.</p>
+  <input id="file-input" type="file" multiple hidden>
+  <section id="library" class="library" hidden><div class="library-heading"><div><h2>Your uploads</h2><p>文件保存在此浏览器中</p></div><button id="close-library" aria-label="关闭文件列表">×</button></div><div id="library-list"></div></section>
+</main>
+<div class="caption">A little less work. A little more play.<span>拖动投篮 · 点击选文件 · 本地保存</span></div>
+<script defer src="theme.js"></script>
+<script defer src="audio.js"></script>
+<script defer src="app.js"></script>
+</body></html>
